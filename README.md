@@ -64,6 +64,7 @@ Enter number (1-5):
 * `Q` – Quit playback
 * `L` – Loop current track
 * `D` – Toggle dark mode
+
 An animated ASCII visualizer will dance to your music!
 
 ---
