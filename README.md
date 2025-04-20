@@ -19,7 +19,6 @@ A terminal-based YouTube audio streamer with hotkeys, ASCII visualizer, and blaz
 - 📜 Playback history and replay
 - 📊 ASCII animated audio visualizer
 - ⚡ Blazingly fast YouTube search via `yt-dlp`
-- 🪟 Changes Command Prompt window title to `YouTube Python`
 
 ---
 
