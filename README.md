@@ -3,9 +3,8 @@
 </p>
 
 
-<h1 align="center">🎵 PyYouTubeAudio</h1>
 <p align="center"><i>
-A terminal-based YouTube audio streamer with hotkeys, ASCII visualizer, and blazing-fast search — built for Windows Command Prompt.
+A terminal-based YouTube audio streamer with hotkeys, ASCII visualizer, and blazing-fast search — built for Windows.
 </i></p>
 
 ---
