@@ -46,7 +46,7 @@ pip install -r requirements.txt
 
 ## 📗 Usage
 ```
-python youtube.py
+python PyYouTubeAudio.py
 ```
 You'll be prompted for a YouTube search term. Example:
 ```sql
