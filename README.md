@@ -75,7 +75,7 @@ PyYouTubeAudio/
 ├── youtube.py           # Main script
 ├── README.md            # This file
 ├── requirements.txt     # Python dependencies
-└── LICENSE              # (Optional) Open-source license
+└── LICENSE              # Open-source license
 ```
 
 ---
