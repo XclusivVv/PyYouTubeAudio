@@ -1,69 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG Animation Example</title>
-    <style>
-        html, body {
-            background: #333;
-            height: 100%;
-            overflow: hidden;
-            text-align: center;
-        }
+<svg width="360" height="60" viewBox="0 0 360 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .shape {
+      fill: transparent;
+      stroke: #19f6e8;
+      stroke-width: 3;
+      stroke-dasharray: 8;
+      stroke-linecap: round;
+      animation: pulse 4s infinite linear;
+    }
 
-        .svg-wrapper {
-            height: 60px;
-            margin: 0 auto;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 320px;
-        }
+    .label {
+      font-family: 'Arial', sans-serif;
+      font-size: 22px;
+      letter-spacing: 6px;
+      fill: white;
+      dominant-baseline: middle;
+      text-anchor: middle;
+      animation: bounce 1s infinite ease-in-out;
+    }
 
-        .shape {
-            fill: transparent;
-            stroke-dasharray: 140 540;
-            stroke-dashoffset: -474;
-            stroke-width: 8px;
-            stroke: #19f6e8;
-        }
+    .emoji {
+      font-size: 22px;
+      animation: wiggle 1.5s infinite ease-in-out;
+    }
 
-        .text {
-            color: #fff;
-            font-family: 'Roboto Condensed';
-            font-size: 22px;
-            letter-spacing: 8px;
-            line-height: 32px;
-            position: relative;
-            top: -48px;
-        }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
 
-        @keyframes draw {
-            0% {
-                stroke-dasharray: 140 540;
-                stroke-dashoffset: -474;
-                stroke-width: 8px;
-            }
-            100% {
-                stroke-dasharray: 760;
-                stroke-dashoffset: 0;
-                stroke-width: 2px;
-            }
-        }
+    @keyframes pulse {
+      0% {
+        stroke: #ff00ff;
+      }
+      25% {
+        stroke: #00ffff;
+      }
+      50% {
+        stroke: #00ff00;
+      }
+      75% {
+        stroke: #ffff00;
+      }
+      100% {
+        stroke: #ff00ff;
+      }
+    }
 
-        .svg-wrapper:hover .shape {
-            -webkit-animation: 0.5s draw linear forwards;
-            animation: 0.5s draw linear forwards;
-        }
-    </style>
-</head>
-<body>
-    <div class="svg-wrapper">
-        <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
-            <rect class="shape" height="60" width="320" />
-        </svg>
-        <div class="text">PyYouTubeAudio</div>
-    </div>
-</body>
-</html>
+    @keyframes wiggle {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      25% {
+        transform: rotate(10deg);
+      }
+      75% {
+        transform: rotate(-10deg);
+      }
+    }
+  </style>
+
+  <rect class="shape" x="5" y="5" width="350" height="50" rx="8" ry="8"/>
+  <text class="label" x="180" y="35">PyYouTubeAudio</text>
+  <text class="emoji" x="320" y="35">🎵</text>
+</svg>
