@@ -120,6 +120,29 @@
   <text x="50%" y="1450" text-anchor="middle" class="subtext">├── requirements.txt     # Python dependencies</text>
   <text x="50%" y="1500" text-anchor="middle" class="subtext">└── LICENSE              # Open-source license</text>
 
-  <!-- Credits Section -->
-  <text x="50%" y="1550" text-anchor="middle" class="highlight">🙏 Credits</text>
-  <text
+ <!-- Credits Section -->
+<text x="50%" y="2150" text-anchor="middle" class="highlight">🙏 Credits</text>
+<text x="50%" y="2200" text-anchor="middle" class="subtext">* [yt-dlp](https://github.com/yt-dlp/yt-dlp) — Fast YouTube downloader backend</text>
+<text x="50%" y="2250" text-anchor="middle" class="subtext">* [python-vlc](https://pypi.org/project/python-vlc/) — Media playback</text>
+<text x="50%" y="2300" text-anchor="middle" class="subtext">* [colorama](https://pypi.org/project/colorama/) — Colored terminal output</text>
+
+<!-- Upcoming Ideas Section -->
+<text x="50%" y="2350" text-anchor="middle" class="highlight">🔄 Upcoming Ideas</text>
+<text x="50%" y="2400" text-anchor="middle" class="subtext">* 🕘 Playback history & replay system</text>
+<text x="50%" y="2450" text-anchor="middle" class="subtext">* 🔁 Toggleable loop mode</text>
+<text x="50%" y="2500" text-anchor="middle" class="subtext">* 🌘 Dark mode enhancements</text>
+<text x="50%" y="2550" text-anchor="middle" class="subtext">* 📃 Playlist & queue support</text>
+<text x="50%" y="2600" text-anchor="middle" class="subtext">* 💬 Discord Rich Presence</text>
+<text x="50%" y="2650" text-anchor="middle" class="subtext">* 📸 Screenshot/GIF visual preview</text>
+
+<!-- Contributions Section -->
+<text x="50%" y="2700" text-anchor="middle" class="highlight">🙌 Contributions Welcome</text>
+<text x="50%" y="2750" text-anchor="middle" class="subtext">Feel like improving the interface, adding features, or making the audio smoother?</text>
+<text x="50%" y="2800" text-anchor="middle" class="subtext">Pull requests and suggestions are very welcome!</text>
+
+<!-- License Section -->
+<text x="50%" y="2850" text-anchor="middle" class="highlight">📄 License</text>
+<text x="50%" y="2900" text-anchor="middle" class="subtext">MIT License © 2025 XclusivVv</text>
+
+<!-- End of SVG -->
+</svg>
