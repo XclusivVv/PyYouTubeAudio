@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Lighting Effect</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            animation: rgbLighting 10s infinite alternate;
+        }
+
+        @keyframes rgbLighting {
+            0% {
+                background-color: rgb(255, 0, 0); /* Red */
+            }
+            25% {
+                background-color: rgb(255, 255, 0); /* Yellow */
+            }
+            50% {
+                background-color: rgb(0, 255, 0); /* Green */
+            }
+            75% {
+                background-color: rgb(0, 255, 255); /* Cyan */
+            }
+            100% {
+                background-color: rgb(0, 0, 255); /* Blue */
+            }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>PyYouTubeAudio - A terminal-based YouTube audio streamer</h1>
+</body>
+</html>
