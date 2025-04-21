@@ -20,8 +20,6 @@
 
   <!-- Title Section -->
   <text x="50%" y="80" text-anchor="middle" class="highlight">🎶 PyYouTubeAudio 🎵</text>
-  <text x="50%" y="140" text-anchor="middle" class="subheading">A terminal-based YouTube audio streamer with hotkeys, ASCII visualizer, and blazing-fast search — built for Windows.</text>
-
   <!-- Rain Drops -->
   <circle cx="100" cy="-100" r="3" fill="#00f" class="rain" />
   <circle cx="300" cy="-150" r="3" fill="#00f" class="rain" />
