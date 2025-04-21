@@ -5,86 +5,29 @@
       <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1" />
     </linearGradient>
     <style>
-      .highlight {
-        fill: url(#gradient);
-        font-size: 40px;
-        font-family: 'Arial', sans-serif;
-        font-weight: bold;
-        animation: fade 3s infinite alternate;
-      }
-
-      .subtext {
-        font-size: 20px;
-        font-family: 'Arial', sans-serif;
-        fill: #ff69b4;
-        animation: bounce 1s infinite alternate;
-      }
-
-      .border {
-        fill: none;
-        stroke: #ff00ff;
-        stroke-width: 4;
-        stroke-dasharray: 10,5;
-        animation: dash 2s infinite;
-      }
-
-      @keyframes fade {
-        0% { opacity: 1; }
-        100% { opacity: 0.5; }
-      }
-
-      @keyframes bounce {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-        100% { transform: translateY(0); }
-      }
-
-      @keyframes dash {
-        0% { stroke-dashoffset: 0; }
-        100% { stroke-dashoffset: 50; }
-      }
-
-      /* New Animations for Text */
-      @keyframes glowingText {
-        0% { text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00; }
-        100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
-      }
-
-      /* Adjusting animation for SVG borders */
-      @keyframes wave {
-        0% { stroke-dashoffset: 10; }
-        100% { stroke-dashoffset: 150; }
-      }
-
-      /* Change font to something modern */
-      .heading {
-        font-family: 'Roboto', sans-serif;
-        font-size: 50px;
-        text-align: center;
-        animation: glowingText 1.5s infinite alternate;
-      }
-
-      .subheading {
-        font-family: 'Roboto', sans-serif;
-        font-size: 25px;
-        text-align: center;
-        animation: bounce 1.5s infinite ease-in-out;
-        fill: #00ffff;
-      }
-
-      .code {
-        font-family: 'Courier New', monospace;
-        font-size: 18px;
-        fill: #ff69b4;
-      }
+      .highlight { fill: url(#gradient); font-size: 40px; font-family: 'Arial', sans-serif; font-weight: bold; animation: glowingText 1.5s infinite alternate; }
+      .subtext { font-size: 20px; font-family: 'Arial', sans-serif; fill: #ff69b4; }
+      .code { font-family: 'Courier New', monospace; font-size: 18px; fill: #ff69b4; animation: bounce 1s infinite alternate; }
+      .emoji { animation: bounce 1s infinite alternate; }
+      .border { fill: none; stroke: #ff00ff; stroke-width: 4; stroke-dasharray: 10,5; animation: dash 2s infinite; }
+      @keyframes glowingText { 0% { text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00; } 100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; } }
+      @keyframes bounce { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
+      @keyframes dash { 0% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 50; } }
+      @keyframes rain { 0% { transform: translateY(0); } 100% { transform: translateY(1000px); } }
+      .rain { animation: rain 2s infinite linear; }
     </style>
   </defs>
 
   <!-- Title Section -->
-  <text x="50%" y="80" text-anchor="middle" class="heading">🎶 PyYouTubeAudio 🎵</text>
+  <text x="50%" y="80" text-anchor="middle" class="highlight">🎶 PyYouTubeAudio 🎵</text>
   <text x="50%" y="140" text-anchor="middle" class="subheading">A terminal-based YouTube audio streamer with hotkeys, ASCII visualizer, and blazing-fast search — built for Windows.</text>
 
-  <rect x="30" y="200" width="940" height="1000" rx="20" ry="20" class="border" />
+  <!-- Rain Drops -->
+  <circle cx="100" cy="-100" r="3" fill="#00f" class="rain" />
+  <circle cx="300" cy="-150" r="3" fill="#00f" class="rain" />
+  <circle cx="500" cy="-200" r="3" fill="#00f" class="rain" />
+  <circle cx="700" cy="-50" r="3" fill="#00f" class="rain" />
+  <circle cx="900" cy="-80" r="3" fill="#00f" class="rain" />
 
   <!-- Features Section -->
   <text x="50%" y="250" text-anchor="middle" class="highlight">🚀 Features</text>
@@ -93,56 +36,27 @@
   <text x="50%" y="400" text-anchor="middle" class="subtext">- ⌨️ Pause / Resume / Quit with hotkeys (`P`, `Q`)</text>
   <text x="50%" y="450" text-anchor="middle" class="subtext">- 🔁 Loop mode support (`L`)</text>
   <text x="50%" y="500" text-anchor="middle" class="subtext">- 💡 Dark mode toggle (`D`)</text>
-  <text x="50%" y="550" text-anchor="middle" class="subtext">- 📜 Playback history and replay</text>
-  <text x="50%" y="600" text-anchor="middle" class="subtext">- 📊 ASCII animated audio visualizer</text>
-  <text x="50%" y="650" text-anchor="middle" class="subtext">- ⚡ Blazingly fast YouTube search via <code>yt-dlp</code></text>
 
-  <!-- Installation Section -->
-  <text x="50%" y="700" text-anchor="middle" class="highlight">🛠 Installation</text>
-  <text x="50%" y="750" text-anchor="middle" class="subtext">> 💡 Make sure Python 3.9+ and pip are already installed.</text>
-  <text x="50%" y="800" text-anchor="middle" class="subtext">1️⃣ Clone the Repo</text>
-  <text x="50%" y="850" text-anchor="middle" class="code">git clone https://github.com/XclusivVv/PyYouTubeAudio.git</text>
-  <text x="50%" y="900" text-anchor="middle" class="code">cd PyYouTubeAudio</text>
-  <text x="50%" y="950" text-anchor="middle" class="subtext">2️⃣ Install Requirements</text>
-  <text x="50%" y="1000" text-anchor="middle" class="code">pip install -r requirements.txt</text>
-  <text x="50%" y="1050" text-anchor="middle" class="subtext">3️⃣ Install VLC Media Player</text>
-  <text x="50%" y="1100" text-anchor="middle" class="subtext">* Download from: https://www.videolan.org/vlc/</text>
+   <!-- Installation Section -->
+  <text x="50%" y="550" text-anchor="middle" class="highlight">🛠 Installation</text>
+  <text x="50%" y="600" text-anchor="middle" class="subtext">> 💡 Ensure Python 3.9+ and pip are installed.</text>
+  <text x="50%" y="650" text-anchor="middle" class="subtext">1️⃣ Clone the Repo</text>
+  <text x="50%" y="700" text-anchor="middle" class="code">git clone https://github.com/XclusivVv/PyYouTubeAudio.git</text>
+  <text x="50%" y="750" text-anchor="middle" class="code">cd PyYouTubeAudio</text>
+  <text x="50%" y="800" text-anchor="middle" class="subtext">2️⃣ Install Requirements</text>
+  <text x="50%" y="850" text-anchor="middle" class="code">pip install -r requirements.txt</text>
 
-  <!-- Usage Section -->
-  <text x="50%" y="1150" text-anchor="middle" class="highlight">📗 Usage</text>
-  <text x="50%" y="1200" text-anchor="middle" class="subtext">python PyYouTubeAudio.py</text>
+  <text x="50%" y="900" text-anchor="middle" class="highlight">📗 Usage</text>
+  <text x="50%" y="950" text-anchor="middle" class="subtext">python PyYouTubeAudio.py</text>
 
-  <!-- Project Structure -->
-  <text x="50%" y="1250" text-anchor="middle" class="highlight">🗂 Project Structure</text>
-  <text x="50%" y="1300" text-anchor="middle" class="subtext">PyYouTubeAudio/</text>
-  <text x="50%" y="1350" text-anchor="middle" class="subtext">├── youtube.py           # Main script</text>
-  <text x="50%" y="1400" text-anchor="middle" class="subtext">├── README.md            # This file</text>
-  <text x="50%" y="1450" text-anchor="middle" class="subtext">├── requirements.txt     # Python dependencies</text>
-  <text x="50%" y="1500" text-anchor="middle" class="subtext">└── LICENSE              # Open-source license</text>
-  
-  <!-- Upcoming Ideas Section -->
-<text x="50%" y="2350" text-anchor="middle" class="highlight">🔄 Upcoming Ideas</text>
-<text x="50%" y="2400" text-anchor="middle" class="subtext">* 🕘 Playback history & replay system</text>
-<text x="50%" y="2450" text-anchor="middle" class="subtext">* 🔁 Toggleable loop mode</text>
-<text x="50%" y="2500" text-anchor="middle" class="subtext">* 🌘 Dark mode enhancements</text>
-<text x="50%" y="2550" text-anchor="middle" class="subtext">* 📃 Playlist & queue support</text>
-<text x="50%" y="2600" text-anchor="middle" class="subtext">* 💬 Discord Rich Presence</text>
-<text x="50%" y="2650" text-anchor="middle" class="subtext">* 📸 Screenshot/GIF visual preview</text>
+  <text x="50%" y="1000" text-anchor="middle" class="highlight">🗂 Project Structure</text>
+  <text x="50%" y="1050" text-anchor="middle" class="subtext">PyYouTubeAudio/</text>
+  <text x="50%" y="1100" text-anchor="middle" class="subtext">├── youtube.py           # Main script</text>
+  <text x="50%" y="1150" text-anchor="middle" class="subtext">├── README.md            # This file</text>
+  <text x="50%" y="1200" text-anchor="middle" class="subtext">└── LICENSE              # Open-source license</text>
 
- <!-- Credits Section -->
-<text x="50%" y="2150" text-anchor="middle" class="highlight">🙏 Credits</text>
-<text x="50%" y="2200" text-anchor="middle" class="subtext">* [yt-dlp](https://github.com/yt-dlp/yt-dlp) — Fast YouTube downloader backend</text>
-<text x="50%" y="2250" text-anchor="middle" class="subtext">* [python-vlc](https://pypi.org/project/python-vlc/) — Media playback</text>
-<text x="50%" y="2300" text-anchor="middle" class="subtext">* [colorama](https://pypi.org/project/colorama/) — Colored terminal output</text>
-
-<!-- Contributions Section -->
-<text x="50%" y="2700" text-anchor="middle" class="highlight">🙌 Contributions Welcome</text>
-<text x="50%" y="2750" text-anchor="middle" class="subtext">Feel like improving the interface, adding features, or making the audio smoother?</text>
-<text x="50%" y="2800" text-anchor="middle" class="subtext">Pull requests and suggestions are very welcome!</text>
-
-<!-- License Section -->
-<text x="50%" y="2850" text-anchor="middle" class="highlight">📄 License</text>
-<text x="50%" y="2900" text-anchor="middle" class="subtext">MIT License © 2025 XclusivVv</text>
-
-<!-- End of SVG -->
+  <text x="50%" y="1250" text-anchor="middle" class="highlight">🙏 Credits</text>
+  <text x="50%" y="1300" text-anchor="middle" class="subtext">* [yt-dlp](https://github.com/yt-dlp/yt-dlp) — Fast YouTube downloader backend</text>
+  <text x="50%" y="1350" text-anchor="middle" class="subtext">* [python-vlc](https://pypi.org/project/python-vlc/) — Media playback</text>
+  <text x="50%" y="1400" text-anchor="middle" class="subtext">* [colorama](https://pypi.org/project/colorama/) — Colored terminal output</text>
 </svg>
