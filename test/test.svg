@@ -1,0 +1,60 @@
+<svg width="100%" height="100%" viewBox="0 0 1000 1200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .highlight { fill: url(#gradient); font-size: 40px; font-family: 'Arial', sans-serif; font-weight: bold; animation: glowingText 1.5s infinite alternate; }
+      .subtext { font-size: 20px; font-family: 'Arial', sans-serif; fill: #ff69b4; }
+      .code { font-family: 'Courier New', monospace; font-size: 18px; fill: #ff69b4; animation: bounce 1s infinite alternate; }
+      .emoji { animation: bounce 1s infinite alternate; }
+      .border { fill: none; stroke: #ff00ff; stroke-width: 4; stroke-dasharray: 10,5; animation: dash 2s infinite; }
+      @keyframes glowingText { 0% { text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00; } 100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; } }
+      @keyframes bounce { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
+      @keyframes dash { 0% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 50; } }
+      @keyframes rain { 0% { transform: translateY(0); } 100% { transform: translateY(1000px); } }
+      .rain { animation: rain 2s infinite linear; }
+    </style>
+  </defs>
+
+  <!-- Title Section -->
+  <text x="50%" y="80" text-anchor="middle" class="highlight">🎶 PyYouTubeAudio 🎵</text>
+  <!-- Rain Drops -->
+  <circle cx="100" cy="-100" r="3" fill="#00f" class="rain" />
+  <circle cx="300" cy="-150" r="3" fill="#00f" class="rain" />
+  <circle cx="500" cy="-200" r="3" fill="#00f" class="rain" />
+  <circle cx="700" cy="-50" r="3" fill="#00f" class="rain" />
+  <circle cx="900" cy="-80" r="3" fill="#00f" class="rain" />
+
+  <!-- Features Section -->
+  <text x="50%" y="250" text-anchor="middle" class="highlight">🚀 Features</text>
+  <text x="50%" y="300" text-anchor="middle" class="subtext">- 🎧 Stream audio from YouTube directly in your terminal</text>
+  <text x="50%" y="350" text-anchor="middle" class="subtext">- 🎨 Colorful interface using <code>colorama</code></text>
+  <text x="50%" y="400" text-anchor="middle" class="subtext">- ⌨️ Pause / Resume / Quit with hotkeys (`P`, `Q`)</text>
+  <text x="50%" y="450" text-anchor="middle" class="subtext">- 🔁 Loop mode support (`L`)</text>
+  <text x="50%" y="500" text-anchor="middle" class="subtext">- 💡 Dark mode toggle (`D`)</text>
+
+   <!-- Installation Section -->
+  <text x="50%" y="550" text-anchor="middle" class="highlight">🛠 Installation</text>
+  <text x="50%" y="600" text-anchor="middle" class="subtext">> 💡 Ensure Python 3.9+ and pip are installed.</text>
+  <text x="50%" y="650" text-anchor="middle" class="subtext">1️⃣ Clone the Repo</text>
+  <text x="50%" y="700" text-anchor="middle" class="code">git clone https://github.com/XclusivVv/PyYouTubeAudio.git</text>
+  <text x="50%" y="750" text-anchor="middle" class="code">cd PyYouTubeAudio</text>
+  <text x="50%" y="800" text-anchor="middle" class="subtext">2️⃣ Install Requirements</text>
+  <text x="50%" y="850" text-anchor="middle" class="code">pip install -r requirements.txt</text>
+
+  <text x="50%" y="900" text-anchor="middle" class="highlight">📗 Usage</text>
+  <text x="50%" y="950" text-anchor="middle" class="subtext">python PyYouTubeAudio.py</text>
+
+  <text x="50%" y="1000" text-anchor="middle" class="highlight">🗂 Project Structure</text>
+  <text x="50%" y="1050" text-anchor="middle" class="subtext">PyYouTubeAudio/</text>
+  <text x="50%" y="1100" text-anchor="middle" class="subtext">├── youtube.py           # Main script</text>
+  <text x="50%" y="1150" text-anchor="middle" class="subtext">├── README.md            # This file</text>
+  <text x="50%" y="1200" text-anchor="middle" class="subtext">└── LICENSE              # Open-source license</text>
+
+  <text x="50%" y="1250" text-anchor="middle" class="highlight">🙏 Credits</text>
+  <text x="50%" y="1300" text-anchor="middle" class="subtext">* [yt-dlp](https://github.com/yt-dlp/yt-dlp) — Fast YouTube downloader backend</text>
+  <text x="50%" y="1350" text-anchor="middle" class="subtext">* [python-vlc](https://pypi.org/project/python-vlc/) — Media playback</text>
+  <text x="50%" y="1400" text-anchor="middle" class="subtext">* [colorama](https://pypi.org/project/colorama/) — Colored terminal output</text>
+</svg>
