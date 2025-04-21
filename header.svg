@@ -3,20 +3,23 @@
     .title {
       font-size: 40px;
       fill: white;
-      animation: pulse 2s infinite alternate;
+      animation: textFade 2s infinite alternate;
     }
-    @keyframes pulse {
-      0% { fill: #00ffff; }
-      100% { fill: #ff00ff; }
+    @keyframes textFade {
+      0% { fill: #ff00ff; } /* Magenta */
+      25% { fill: #ffff00; } /* Yellow */
+      50% { fill: #00ff00; } /* Green */
+      75% { fill: #00ffff; } /* Cyan */
+      100% { fill: #0000ff; } /* Blue */
     }
     .bg {
-      animation: bgshift 10s infinite alternate;
+      animation: bgChange 10s infinite alternate;
     }
-    @keyframes bgshift {
-      0% { fill: #111122; }
-      100% { fill: #222211; }
+    @keyframes bgChange {
+      0% { fill: #111122; } /* Dark */
+      100% { fill: #222211; } /* Lighter */
     }
   </style>
   <rect class="bg" width="600" height="100" />
-  <text x="50%" y="60" text-anchor="middle" class="title">🎧 PyYouTubeAudio</text>
+  <text x="50%" y="60" text-anchor="middle" class="title">PyYouTubeAudio - A terminal-based YouTube audio streamer</text>
 </svg>
